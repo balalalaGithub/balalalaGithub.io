@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>谁是喜剧之王？</title>
+    <!-- Preloader -->
+    
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <style>
+        .centertext{
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            line-height:30px;
+            }
+    </style>
+
+    <style>
+        .titletext{
+            text-align: center;
+            font-size: 30px;
+            border-radius: 50px;
+            background-color: rgb(224, 172, 172);
+            border: none;
+        }
+        .inputText:focus{
+            outline: none;
+            background-color: lightblue;
+        }
+    </style>
+
+    
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <meta charset="UTF-8">
+    <meta name="weather_project">
+    <title>WEATHER</title>
+    <!-- 引入 css文件 -->
+    <link rel="stylesheet" href="C:\Users\Administrator\Desktop\数据新闻\stylesheet.css"/> 
+</head>
+
+
+
+
+<body >
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Main content -->
+    <section class="slice py-7" style="background-color:skyblue;">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5" >
+                    <!-- Heading -->
+                    <h1 class="centertext">
+                       谁是喜剧之王？
+                       <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        ——中国十年喜剧纵览
+                    </h1>
+
+
+                    <form action="/year" method="POST">
+                        <br>
+                        <p>某城市某年的天气情况</p>
+                        <div class="form">
+                            <p>查找的城市</p>
+                            <input class="form-name" placeholder="输入城市的名字，如：成都" name="city" type="text" autofocus>
+                        </div><br>
+                        <div class="form" style="margin-top: 30px;">
+                            <p>查找的年份</p>
+                            <input class="form-name" placeholder="输入过去十年内的年份，如：2020" name="year" type="text" autofocus>
+                        </div><br>
+                        <input type="submit" value="搜索" class="btn" /></br>           
+                    </form>
+
+                    <form action="/year" method="POST">
+                        <div id="city_year">
+                            <h1>某城市某年的天气情况</h1>
+                            <!-- <p>某城市某年的天气情况</p> -->
+            
+                            <div class="form">
+                                <div class="item">
+                                    <p>查找的城市</p>
+                                    <input  placeholder="城市名字，如：成都" name="city" type="text">
+                                </div>
+                            </div><br>
+                            <div class="form">
+                                <div class="item">
+                                    <p>查找的年份</p>
+                                    <input class="form-name" placeholder="仅限十年以内，如：2020" name="year" type="text" autofocus>
+                                </div>
+                            </div><br>
+                        
+                        
+                            <!-- <input type="submit" value="搜索" class="btn" /></br>   -->
+                            <!-- 用button实现的Login登陆按钮 -->
+                            <button type="submit">搜索</button>              
+                        </div>
+                    </form>
+                    
+                    <!-- Text -->
+                    
+                    <p class="titletext">1 不用口罩的电影院，你想看点什么？</p>
+                    
+                    <p class="centertext">
+                     三年疫情三年电影颓势，电影院开开关关，开张日子不足（放数据）在仅有的开门时间中，喜剧电影票房占据了xxx，和过去相比似乎只是回到过去/更胜一筹/远远不如，被打断的十年，喜剧电影在如何发展？
+                    </p>
+                    <p class="centertext">
+                    回顾喜剧电影十年，评分、票房跌宕起伏，（放数据和评价变化）过去，（2014年）喜剧是电影的半壁江山/冰山一角，十年出圈x次，却一年比一年落魄，是什么制约了喜剧？
+                    </p>
+                    <!-- Buttons -->
+                    <div class="text-center text-md-left mt-5">
+                        <a href="https://movie.douban.com/subject/26752088/" class="btn btn-primary btn-icon" target="_blank">
+                            <span class="btn-inner--text">点这里了解更多</span>
+                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="flourish-embed flourish-bubble-chart" data-src="visualisation/15814107"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    
